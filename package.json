@@ -1,9 +1,9 @@
 {
-  "name": "react-loaders",
-  "version": "3.0.1",
+  "name": "react-loaders-color",
+  "version": "3.2.1",
   "description": "Lightweight wrapper around Loaders.css",
-  "main": "./dist/react-loaders.js",
-  "typings": "./dist/react-loaders",
+  "main": "./dist/react-loaders-color.js",
+  "typings": "./dist/react-loaders-color",
   "scripts": {
     "test": "jest",
     "build": "NODE_ENV=production gulp demo",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/jonjaques/react-loaders.git"
+    "url": "http://github.com/balintkissshapr3d/react-loaders.git"
   },
   "author": "Jon Jaques <jaquers@gmail.com>",
   "license": "MIT",

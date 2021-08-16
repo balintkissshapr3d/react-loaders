@@ -1,41 +1,36 @@
-var path = require('path')
-var webpack = require('webpack')
-var externals = require('webpack-node-externals')()
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+var path = require("path");
+var webpack = require("webpack");
+var externals = require("webpack-node-externals")();
+var UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = [
   {
-    entry: './src/index',
+    entry: "./src/index",
     output: {
-      path: path.resolve('dist'),
-      filename: "react-loaders.js",
-      libraryTarget: 'commonjs2'
+      path: path.resolve("dist"),
+      filename: "react-loaders-color.js",
+      libraryTarget: "commonjs2",
     },
     externals: [externals],
     module: {
-      loaders: [
-        { test: /\.js$/, loader: 'babel-loader' }
-      ]
+      loaders: [{ test: /\.js$/, loader: "babel-loader" }],
     },
-    plugins: [
-    ]
+    plugins: [],
   },
   {
-    entry: './demo/index',
+    entry: "./demo/index",
     output: {
-      path: path.resolve('dist'),
+      path: path.resolve("dist"),
       filename: "demo.js",
-      library: '__DEMO__',
-      libraryTarget: 'umd'
+      library: "__DEMO__",
+      libraryTarget: "umd",
     },
     module: {
-      loaders: [
-        { test: /\.js$/, loader: 'babel-loader' }
-      ]
+      loaders: [{ test: /\.js$/, loader: "babel-loader" }],
     },
     plugins: [
-      new webpack.EnvironmentPlugin(['NODE_ENV']),
-      new UglifyJsPlugin({sourceMap: true})
-    ]
-  }
-]
+      new webpack.EnvironmentPlugin(["NODE_ENV"]),
+      new UglifyJsPlugin({ sourceMap: true }),
+    ],
+  },
+];
